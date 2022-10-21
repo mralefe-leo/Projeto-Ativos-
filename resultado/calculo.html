@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, rgb(20,147,220), rgb(17,54,71));
+        }
+        h1{
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
+
+       }
+       table{
+            page-break-inside: auto;
+            width: 300%;
+            height: 10%;
+            position:absolute;
+            top: 25%;
+            left: 0.5%;
+            
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 8px;
+            width: 95%;
+            
+        }
+        .table-bg{
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px 15px 0 0;
+       }
+        thead{
+            display: table-header-group;
+        }
+        th{
+            color: aliceblue;
+        }
+        tr{
+            color: aliceblue;
+        }
+        img{
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0.0001%;
+            
+        }
+        .table-status{
+            margin-top: 500px;
+        }
+        
+        
+        
+    </style>
+
+
+
+</head>
+
+
+<body>
+    
+    <h1>Recol Veículos LTDA</h1>
+    
+    <h2>Calculo de ATIVOS</h2>
+    <img src="volks.png" alt="cat">
+    
+    <br><table class="table-auto" border="1" class="table-bg" align="center" cellpadding="5px">
+        
+        
+        <thead>
+
+            <tr>
+            <th>Meses</th>
+            <th>Contas a Receber</th>
+            <th>Estoque Peças</th>
+            <th>Estoque Veículos Novos</th>
+            <th>Estoque Veiculos Usados</th>
+            <th>caixa/Banco</th>
+            <th>Contas a Pagar</th>
+            <th>Total</th>
+
+        </tr>
+
+        </thead>
+        <tbody>
+    <tr>
+
+        <td class="px-6 py-4">
+        <select name="meses" id="meses">
+            <option value="Janeiro">Janeiro</option>
+            <option value="Fevereiro">Fevereiro</option>
+            <option value="Março">Março</option>
+            <option value="Abril">Abril</option>
+            <option value="Maio">Maio</option>
+            <option value="Junho">Junho</option>
+            <option value="Julho">Julho</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Setembro">Setembro</option>
+            <option value="Outubro">Outubro</option>
+            <option value="Novembro">Novembro</option>
+            <option value="Dezembro">Dezembro</option>
+
+
+        </select>
+        
+
+        <td class="px-6 py-4">
+                                
+            <div class="inputBox">
+        <input id="contas_receber" type="text">
+                </div>
+
+            <td class="px-6 py-4">
+
+            <div class="inputBox">
+         <input id="estoque_pecas" type="text">
+                 </div>
+                 <td class="px-6 py-4">
+                                
+            <div class="inputBox">
+        <input id="estoque_novos" type="text">
+                </div>
+
+            <td class="px-6 py-4">
+                                
+            <div class="inputBox">
+        <input id="estoque_usados" type="text">
+                 </div> 
+            
+            <td class="px-6 py-4">
+                                
+                <div class="inputBox">
+        <input id="caixa_banco" type="text">
+                    </div> 
+                         
+            <td class="px-6 py-4">
+                                
+                <div class="inputBox">
+        <input id="contas_pagar" type="text">
+                    </div> 
+            
+            <td class="px-6 py-4">
+                    <button ondblclick="somar()">Somar</button>
+                    O Resultado é <span ondblclick="somar()"></span>
+                    <br> <br>
+            
+                 
+
+                </tr>
+        
+
+
+    </tbody>
+
+        
+    
+    <script>
+        var contas_receber = document.querySelector('#contas_receber')
+        var estoque_pecas = document.querySelector('#estoque_pecas')
+        var estoque_novos = document.querySelector('#estoque_novos')
+        var estoque_usados = document.querySelector('#estoque_usados')
+        var caixa_banco = document.querySelector('#caixa_banco')
+        var contas_pagar = document.querySelector('#contas_pagar')
+        var resultado = document.querySelector('span')
+
+        function somar(){
+            resultado.innerHTML = parseInt(contas_receber.value) + parseInt(estoque_pecas.value) +
+            parseInt(estoque_novos.value) + parseInt(estoque_usados.value) + 
+            parseInt(caixa_banco.value) + parseInt(contas_pagar.value) 
+            
+        }
+        //function somar99{
+           // resultado.innerHTML = parseInt(estoque_novos.value) + parseInt(estoque_usados.value)
+      //  }
+
+    </script>
+
+   
+    
+
+</table>
+
+
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table-status" width="50px" margin="border-radius 20px 10px 0px" border="3">
+<tr>
+    <thead>
+        <th>Ativos</th>
+        <th >Janeiro</th>
+        <th>Fevereiro</th>
+        <th>Março</th>
+        <th>Abril</th>
+        <th>Maio</th>
+        <th>Junho</th>
+        <th>Julho</th>
+        <th>Agosto</th>
+        <th>Setembro</th>
+        <th>Outubro</th>
+        <th>Novembro</th>
+        <th>Dezembro</th>
+        
+    </thead>
+</tr>
+<tr>
+    <tbody>
+        <tr>
+        <td id="contas1">Contas a Receber</td>
+        <th> <div class="inputBox">
+            Total <span ondblclick="somar99()"></span>
+                        </div>
+    </tr>
+        <tr>
+        <td id="estoque1">Estoque
+       <th> <div class="inputBox">
+        Total <span ondblclick="somar99()"></span>
+                    </div>
+    </tr>
+    <tr>
+        <td id="caixa1">Caixa/Banco</td>
+        <th> <div class="inputBox">
+            Total <span ondblclick="somar99()"></span>
+                        </div>
+    </tr>
+    <tr>
+        <td id="pagar1">Contas a Pagar</td>
+        <th> <div class="inputBox">
+            Total <span ondblclick="somar99()"></span>
+                        </div>
+    </tr>
+    <tr>
+        <td id="total">Total</td>
+        <th> <div class="inputBox">
+            Total <span ondblclick="somar99()"></span>
+                        </div>
+    </tr>
+    
+    </td>
+    
+   
+    
+   
+        
+    </tbody>
+   <script>
+
+           // function somar99({
+                //resultado.innerHTML = parseInt(estoque_novos) + parseInt(estoque_usados)
+           // })
+           
+
+    </script>
+</tr>
+</table>
+</div>
+
+
+
+
+</body>
+</html>
